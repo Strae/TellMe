@@ -1,0 +1,63 @@
+
+
+#map{
+  height: 400px;
+  width: 100%;
+}
+
+
+#ui{
+  display: none;
+  color: #333;
+  position: fixed;
+  top: 334px;
+  height: 81px;
+  z-index: 999;
+  padding: 5px;
+  overflow: hidden;
+  width: 350px;
+}
+
+#ui section{
+  display: inline-block;
+  height: 30px;
+  overflow: hidden;
+}
+
+#ui ul{
+  padding: 4px;
+  margin: 0px;
+  list-style: outside none none;
+  font-size: 13px;
+  font-family: "Fira Sans";
+  text-align: center;
+}
+#ui ul li{
+  display: inline-block;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #F00;
+  margin: 0px;
+}
+#ui ul li.current{
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#ui .paginator-first{
+}
+#ui .paginator-prev{}
+#ui .paginator-command{
+  width: 26px;
+  height: 26px;
+}
+#ui .selector{}
+#ui .paginator-next{
+}
+#ui .paginator-last{}
+
+
+#year{}
+#month{}
+#day{}
+#hour{}

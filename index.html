@@ -1,0 +1,145 @@
+<html>
+<head>
+    <title>LeafLet TEST</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
+    <link href="vendor/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap-3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/jsPhotoStory.css">
+</head>
+<body>
+<div>
+    <p>
+
+    <div id="map"></div>
+    <div id="ui">
+        <section id="year">
+            <ul>
+                <li class="paginator-command paginator-first pull-left"> &lt; &lt; </li>
+                <li class="paginator-command paginator-prev pull-left"> &lt; </li>
+                <li class="selector">
+                    <select>
+                        <option>2012</option>
+                        <option>2013</option>
+                        <option>2014</option>
+                        <option selected="selected">2015</option>
+                        <option>2016</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                    </select>
+                </li>
+                <li class="paginator-command paginator-next pull-right"> &gt; </li>
+                <li class="paginator-command paginator-last pull-right"> &gt; &gt;</li>
+            </ul>
+        </section>
+        <section id="month">
+            <ul>
+                <li class="paginator-command paginator-first pull-left"> &lt; &lt; </li>
+                <li class="paginator-command paginator-prev pull-left"> &lt; </li>
+                <li class="selector">
+                    <select>
+                        <option>gen</option>
+                        <option>feb</option>
+                        <option>mar</option>
+                        <option>apr</option>
+                        <option>mag</option>
+                        <option>giu</option>
+                        <option selected="selected">lug</option>
+                        <option>ago</option>
+                        <option>set</option>
+                        <option>ott</option>
+                        <option>nov</option>
+                        <option>dic</option>
+                    </select>
+                </li>
+                <li class="paginator-command paginator-last pull-right"> &gt; &gt;</li>
+                <li class="paginator-command paginator-next pull-right"> &gt; </li>
+            </ul>
+        </section>
+        <section id="day">
+            <ul>
+                <li class="paginator-command paginator-first pull-left"> &lt; &lt; </li>
+                <li class="paginator-command paginator-prev pull-left"> &lt; </li>
+                <li class="selector">
+                    <select>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option selected="selected">08</option>
+                        <option>09</option>
+                        <option>10</option>
+                    </select>
+                </li>
+                <li class="paginator-command paginator-next pull-right"> &gt; </li>
+                <li class="paginator-command paginator-last pull-right"> &gt; &gt;</li>
+            </ul>
+        </section>
+        <section id="hour">
+            <ul>
+                <li class="paginator-command paginator-first pull-left"> &lt; &lt; </li>
+                <li class="paginator-command paginator-prev pull-left"> &lt; </li>
+                <li class="selector">
+                    <select>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option selected="selected">12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                    </select>
+                </li>
+                <li class="paginator-command paginator-next pull-right"> &gt; </li>
+                <li class="paginator-command paginator-last pull-right"> &gt; &gt;</li>
+            </ul>
+        </section>
+    </div>
+    </p>
+    <p>
+        <div id="log"></div><br>
+        <a class="btn btn-warning btn-sm" href="#" id="action1" role="button">Mappa</a>
+    <a class="btn btn-sm btn-danger" href="#" id="action14" role="button">Goto</a>
+        <a class="btn btn-primary btn-sm" href="#" id="action2" role="button">Marker Img</a>
+        <a class="btn btn-primary btn-sm" href="#" id="action3" role="button">Arco</a>
+        <a class="btn btn-primary btn-sm" href="#" id="action4" role="button">Bionda</a>
+    <br>
+        <a class="btn btn-primary btn-sm" href="#" id="action5" role="button">SET ZOOM</a>
+        <input type="number" value="10" id="offset"/>
+    <br>
+        <a class="btn btn-primary btn-sm" href="#" id="action13" role="button">SET VIEW</a>
+        <input type="text" size="6" id="lat" value="-20" />
+        <input type="text"  size="6" id="lng" value="-44.05" />
+        <input type="text" size="2" value="10" id="zoom" />
+    <br>
+
+        <a class="btn btn-warning btn-sm" href="#" id="action6" role="button">Story Add</a>
+        <a class="btn btn-primary btn-sm" href="#" id="action7" role="button">Set Photo Click</a>
+        <a class="btn btn-warning btn-sm" href="#" id="action8" role="button">Set routes!</a>
+        <a class="btn btn-success btn-sm" href="#" id="action9" role="button">Aviator1</a>
+        <a class="btn btn-success btn-sm" href="#" id="action10" role="button">Aviator2</a>
+        <a class="btn btn-success btn-sm" href="#" id="action12" role="button">Aviator2B</a>
+        <a class="btn btn-success btn-sm" href="#" id="action11" role="button">Aviator3</a>
+        <a class="btn btn-info btn-sm" href="#" id="action17" role="button">DO MATH MAN!</a>
+    </p>
+    <p>
+        <img id="img1" src="images/1.jpg" width="200" />
+        <img id="img2" src="images/2.jpg" width="200" />
+        <img id="img3" src="images/3.jpg" width="200" />
+    </p>
+</div>
+<script src="vendor/jquery/jquery-2.1.4.min.js"></script>
+<script src="vendor/leaflet/leaflet-src.js"></script>
+<script src="vendor/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src='vendor/coords.js'></script>
+<script src="vendor/exif/exif.js" type="application/javascript"></script>
+<script src="vendor/arc.js/arc.js" type="application/javascript"></script>
+<script src="vendor/leaflet-providers-master/leaflet-providers.js" type="application/javascript"></script>
+<script src="js/leaflet-button-control.js" type="application/javascript"></script>
+<script src="js/JsPhotoStory.js" type="application/javascript"></script>
+<script src="js/JsPhotoShapes.js" type="application/javascript"></script>
+<script src="js/JsPhotoEasing.js" type="application/javascript"></script>
+<script src="js/test.js" type="application/javascript"></script>
+</body>
+</html>
