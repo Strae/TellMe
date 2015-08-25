@@ -4,6 +4,7 @@ How to test:
 
 - Click "Mappa" (yellow button)
 - Click "Story Add" (yellow button)
+- Click "Set routes" (yellow button)
 - Then "Aviator1", "Aviator2", "Aviator3" (green buttons, Aviator2B is not to be considered yet)
 
 ## TODO ##
